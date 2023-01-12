@@ -65,15 +65,27 @@ function saveScore (name, score) {
 // タイマー
 function countTime(time) {
     if (time > 0){
-        if (time >= 11) {
+        if (time >= 13) {
             this.tapFlag = false;
             $("#list-page p").html(String(time-10));
         } else if (time == 10) {
             this.tapFlag = true;
             $("#list-page p").html("スタート！");
-        } else {
+        } else{
             this.tapFlag = true;
             $("#list-page p").html(String(time));
+        }
+        if (time == 3) {
+            this.tapFlag = true;
+            $("#list-page p").html("残り3秒!");
+        }
+        if (time == 2) {
+            this.tapFlag = true;
+            $("#list-page p").html("残り2秒!!");
+        }
+        if (time == 1) {
+            this.tapFlag = true;
+            $("#list-page p").html("残り1秒!!!");
         }
         this.countTimer -= 1;
         // １秒後にcountTime()を呼び出す
