@@ -65,7 +65,7 @@ function saveScore (name, score) {
 // タイマー
 function countTime(time) {
     if (time > 0){
-        if (time >= 13) {
+        if (time >= 10) {
             this.tapFlag = false;
             $("#list-page p").html(String(time-10));
         } else if (time == 10) {
