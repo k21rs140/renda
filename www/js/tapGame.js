@@ -104,9 +104,14 @@ function imputName(count){
     if (name == null || name == "") {
         $("#list-page p").html("保存がキャンセルされました");        
     } else {
+        if(count < 40){
         // スコアと入力した名前を保存
-        saveScore(name, count);
-        $("#list-page p").html(name + "さんのスコアは" + String(count) + "連打でした"); 
+            saveScore(name, count);
+            $("#list-page p").html(name + "さんのスコアは" + String(count) + "連打でした"); 
+        }else if(count >= 40){
+            saveScore(name, count);
+            $("#list-page p").html(name + "さんのスコアは" + String(count) + "連打で高得点でした"); 
+        }
     }
     // ボタンの有効化
     document.gameForm.start.disabled = false;
