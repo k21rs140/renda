@@ -87,5 +87,34 @@
             </center>
         </div>
     </div>
+
+
+
+
+
+    <div data-role="page" id="kennsaku-page">
+        <div data-role="header" data-position="fixed" data-theme="c">
+            <h1></h1>
+            <a href="#list-page" data-icon="back" class="ui-btn-left">戻る</a>
+        </div>
+        <div data-role="content">
+            <center>
+                <h1>検索</h1><br />
+                <div>
+                    <label for="name">name:</label>
+                    <input id="name" type="text" placeholder="player name">
+                    </div>
+                    <div>
+                        <label for="score">score:</label>
+                        <input id="score" type="number" placeholder="score">
+                        </div>
+                        <div id="button">
+                            <button class="btn" onclick="searchName()">Name</button>
+                            <button class="btn" onclick="searchScore()">Score</button>
+                            </div>
+                            <div id="message">message area</div>
+            </center>
+        </div>
+    </div>
 </body>
 </html>
